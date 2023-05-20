@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fraunces:opsz,wght@9..144,700&family=Merriweather:ital@0;1&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2EBE3;
+    font-size: 14px;
+    font-family: 'Montserrat', 'Fraunces', 'Poppins';
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    background-color: #ffffff;
+    border-radius: 15px; 
+}
+
+#cards img {
+    max-width: 100%;
+    border-radius: 15px 0px;
+    overflow: hidden;
+}
+
+#cards .content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h6 {
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+
+h1 {
+    font-family: 'Fraunces';
+    font-size: 34px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5em;
+    font-size: 17px;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+.price h2{
+    margin-right: 35px;
+    color:  hsl(158, 36%, 37%);
+    font-family:'Fraunces';
+}
+
+.price h3{
+    color: hsl(228, 12%, 48%);
+}
+
+button {
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align:center;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+
+}
+
+button:hover {
+    background-color: hsl(158, 50%, 22%);
+}
+
+button img{
+    padding-right: 7px;
+}
+
+@media only screen and (max-width: 648px){
+    .content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .cards img{
+        max-height: 400px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    button img{
+        display: none;
+    }
+
+    .cards h6,h2,h3,p{
+        padding-bottom: 20px;
+    }
+}
